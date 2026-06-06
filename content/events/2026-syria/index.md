@@ -10,7 +10,7 @@ workshops:
   - Macarene
   - Cocktails
   - Aidan notation, scrambles
-  - "Efficiency" workshop
+  - '"Efficiency" workshop'
   - Walkabout, walka walka roundabout
   - Clubabout
   - Carries are weird
