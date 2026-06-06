@@ -1,7 +1,7 @@
 ---
 title: "Passout Syria, VA"
-startDate: 2025-05-30
-endDate: 2025-06-07
+startDate: 2026-05-30
+endDate: 2026-06-07
 location: "Syria, VA (near Washington DC)"
 summary: "Eight nights of passing at a mountain house in the Blue Ridge foothills."
 workshops:
