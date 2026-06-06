@@ -9,7 +9,6 @@ workshops:
   - "Takeout patterns"
   - "Intro to club passing for newcomers"
   - "Ring and ball passing"
-cover: "./photos/cover.jpg"
 draft: false
 ---
 
