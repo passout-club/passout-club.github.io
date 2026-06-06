@@ -1,0 +1,50 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container inner">
+    <p class="tag"><strong>Passout</strong> — a community of club passers.</p>
+    <nav aria-label="Footer">
+      <a href="/#what">About</a>
+      <a href="/#events">Past events</a>
+    </nav>
+    <p class="fine">&copy; {year} Passout &middot; Organized by and for the juggling community.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-deep);
+    color: #e8eef2;
+    margin-top: 2rem;
+  }
+  .inner {
+    padding-block: 2.5rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+  .tag {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  .site-footer a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.85;
+  }
+  .site-footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+  .fine {
+    margin: 0.5rem 0 0;
+    color: #b9c6cf;
+    font-size: 0.9rem;
+  }
+</style>

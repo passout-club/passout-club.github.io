@@ -1,0 +1,58 @@
+---
+// Single-page site: the nav links jump to sections on the home page.
+---
+
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="/">Passout</a>
+    <nav aria-label="Primary">
+      <a href="/#what">About</a>
+      <a href="/#events">Past events</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 64px;
+  }
+  .brand {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--color-text);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+  }
+  nav a {
+    color: var(--color-muted);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  nav a:hover {
+    color: var(--color-text);
+  }
+  @media (max-width: 30rem) {
+    nav {
+      gap: 0.75rem;
+      font-size: 0.95rem;
+    }
+  }
+</style>

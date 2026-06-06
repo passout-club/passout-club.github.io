@@ -1,0 +1,235 @@
+---
+import type { ImageMetadata } from 'astro';
+import { getCollection, getEntry, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Gallery from '../components/Gallery.astro';
+import { formatDateRange } from '../lib/dates';
+
+const home = await getEntry('site', 'home');
+const { Content } = home ? await render(home) : { Content: null };
+const heroTitle = home?.data.heroTitle ?? 'A week of nothing but club passing';
+const tagline = home?.data.tagline ?? '';
+
+// Every photo across all events, optimized at build time. We filter to each
+// event's own folder below — maintainers never edit a list, they just drop
+// image files into the event's photos/ folder. The pattern is relative to this
+// file and points at the repo-root content/ folder (three levels up:
+// pages/ -> src/ -> web/ -> repo root).
+const photoModules = import.meta.glob<{ default: ImageMetadata }>(
+  '../../../content/events/**/photos/*.{jpg,jpeg,png,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}',
+  { eager: true }
+);
+
+const normalizeSlug = (id: string) => id.replace(/\/index$/, '');
+
+const events = (await getCollection('events', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.startDate.getTime() - a.data.startDate.getTime()
+);
+
+// Build one section's worth of data per event: its rendered body, and its
+// photos (with the cover removed, since the cover is shown as the banner).
+const eventSections = await Promise.all(
+  events.map(async (event) => {
+    const slug = normalizeSlug(event.id);
+    const coverSrc = event.data.cover?.src;
+    const photos = Object.entries(photoModules)
+      .filter(([path]) => path.includes(`/content/events/${slug}/photos/`))
+      .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+      .map(([, mod]) => mod.default)
+      .filter((img) => img.src !== coverSrc);
+    const { Content: Body } = await render(event);
+    const hasBody = (event.body ?? '').trim().length > 0;
+    return { event, slug, photos, Body, hasBody };
+  })
+);
+---
+
+<Base>
+  <section class="hero">
+    <div class="container hero__inner">
+      <h1>{heroTitle}</h1>
+      {tagline && <p class="lede">{tagline}</p>}
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--big" href="#what">What is Passout?</a>
+        {
+          eventSections.length > 0 && (
+            <a class="btn btn--ghost btn--big" href="#events">
+              Past events
+            </a>
+          )
+        }
+      </div>
+    </div>
+  </section>
+
+  <article id="what" class="section">
+    <div class="container prose home-prose">
+      {Content && <Content />}
+    </div>
+  </article>
+
+  {
+    eventSections.length > 0 && (
+      <section id="events" class="section section--tint">
+        <div class="container">
+          <h2 class="events-title">Past events</h2>
+          <div class="events">
+            {eventSections.map(({ event, slug, photos, Body, hasBody }) => (
+              <article id={slug} class="event">
+                {event.data.cover && (
+                  <div class="event__banner">
+                    <Image
+                      src={event.data.cover}
+                      alt={`Cover photo from ${event.data.title}`}
+                      width={1600}
+                      height={700}
+                      widths={[800, 1200, 1600]}
+                      sizes="100vw"
+                    />
+                  </div>
+                )}
+                <header class="event__head prose">
+                  <p class="meta">
+                    {formatDateRange(event.data.startDate, event.data.endDate)}
+                  </p>
+                  <h3>{event.data.title}</h3>
+                  <p class="loc">{event.data.location}</p>
+                </header>
+
+                {event.data.workshops.length > 0 && (
+                  <div class="prose workshops">
+                    <h4>Workshops</h4>
+                    <ul>
+                      {event.data.workshops.map((w) => (
+                        <li>{w}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {hasBody && (
+                  <div class="prose body">
+                    <Body />
+                  </div>
+                )}
+
+                {photos.length > 0 && (
+                  <Gallery images={photos} label={event.data.title} id={`gallery-${slug}`} />
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+</Base>
+
+<style>
+  .hero {
+    background:
+      linear-gradient(180deg, rgba(251, 248, 243, 0) 0%, var(--color-bg) 100%),
+      radial-gradient(60% 70% at 80% 0%, var(--color-accent-soft) 0%, transparent 70%);
+    padding-block: clamp(3rem, 9vw, 6rem);
+  }
+  .hero__inner {
+    max-width: var(--maxw-text);
+  }
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.4rem;
+  }
+  .btn--big {
+    font-size: 1.05rem;
+    padding: 0.8em 1.6em;
+  }
+
+  /* Styling for the markdown rendered from home.md */
+  .home-prose :global(h2) {
+    margin-top: 2.2rem;
+    padding-top: 1.6rem;
+    border-top: 2px solid var(--color-border);
+  }
+  .home-prose :global(h2:first-of-type) {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+  .home-prose :global(blockquote) {
+    margin: 1.2rem 0;
+    padding: 1rem 1.3rem;
+    background: var(--color-accent-soft);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 1.15rem;
+    font-family: var(--font-display);
+    color: var(--color-accent-dark);
+  }
+  .home-prose :global(blockquote p) {
+    margin: 0.2rem 0;
+  }
+  .home-prose :global(ul) {
+    padding-left: 1.2rem;
+  }
+  .home-prose :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Inlined event sections */
+  .events-title {
+    margin: 0 0 1.5rem;
+  }
+  .events {
+    display: grid;
+    gap: 3.5rem;
+  }
+  .event {
+    scroll-margin-top: 80px;
+  }
+  .event__banner {
+    aspect-ratio: 16 / 7;
+    max-height: 420px;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--color-accent-soft);
+    margin-bottom: 1.2rem;
+  }
+  .event__banner :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .event__head {
+    margin-bottom: 1.2rem;
+  }
+  .event__head .meta {
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--color-accent-dark);
+    font-size: 0.9rem;
+  }
+  .event__head h3 {
+    margin: 0.2rem 0 0.2rem;
+    font-size: 1.6rem;
+  }
+  .event__head .loc {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 1.1rem;
+  }
+  .workshops {
+    margin-bottom: 1.2rem;
+  }
+  .workshops h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+  .body {
+    margin-bottom: 1.4rem;
+  }
+</style>

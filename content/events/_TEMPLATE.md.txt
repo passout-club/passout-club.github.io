@@ -1,0 +1,26 @@
+--- COPY THIS FILE WHEN ADDING A NEW EVENT -------------------------------------
+
+1. Make a new folder under  content/events/  named like  2026-virginia
+2. Inside it, create a file named  index.md  and paste the block below
+   (everything between the lines of dashes), then fill it in.
+3. Make a  photos  folder inside it and upload your photos there.
+
+This file itself is ignored by the website (the .txt extension keeps it out).
+
+--------------------------------------------------------------------------------
+---
+title: "Passout 2026 — Virginia"
+startDate: 2026-05-30        # YYYY-MM-DD
+endDate: 2026-06-07          # YYYY-MM-DD
+location: "Syria, VA (near Washington DC)"
+summary: "One short sentence shown on the event card."
+workshops:
+  - "First workshop name"
+  - "Another workshop"
+cover: "./photos/cover.jpg"  # one of your photos, used as the banner/card image
+draft: false                 # set true to hide it while you work on it
+---
+
+Write a paragraph or two about the week here. What happened, memorable moments,
+who taught what. A little text goes a long way — the photos do most of the work.
+--------------------------------------------------------------------------------
