@@ -1,60 +1,29 @@
 ---
-heroTitle: "A week of nothing but club passing"
-tagline: "Passout is an informal gathering where club passers live together for a week to learn, teach, and invent patterns — and to cook, clean, and hang out as a community."
+heroTitle: "A week of passing"
+tagline: "Passout is an informal community gathering where passers live together for a week to learn, teach, and invent patterns."
 ---
 
 ## What Passout is
 
-Passout is a week-long, informally organized juggling gathering built around **club
-passing** — four-handed siteswaps, takeout patterns, and everything in between, with
-some ball and ring passing mixed in. Solo juggling is rare here; this is about passing
-together.
+Pass-Out is an event for passionate passers. Most activities will revolve around all forms of club passing, from 4-handed siteswaps to takeout patterns, with some ball and ring passing maybe mixed in -- solo juggling is rare. The week will focus on learning, teaching, and inventing new patterns, building community together by cooking for the group, playing board games and doing puzzles, playing volleyclub, and possibly taking an outing together. There are usually many workshops throughout the week.
 
-The week is for **learning, teaching, and inventing new patterns**. Just as much, it's
-about building community: we cook and clean for the group, play board games and do
-puzzles, play volleyclub, and often take an outing together. There are usually many
-workshops throughout the week, run by whoever wants to share something.
 
-It is deliberately small and homemade. We rent a house, everyone pitches in, and we
-spend a week doing the thing we love with people who love it too.
+This is a community event at changing venues. We tend to sleep on site, cook together, teach workshops, pitch in for cleaning, play volleyclub, puzzle or play games, or go on an outing. 
 
 ## Is Passout for me?
 
-This is the question we hear most — usually phrased as *"am I good enough to come?"*
+Never been to Pass-Out before and wondering if you're "good enough" to come? Ask yourself, would you enjoy doing nothing but passing for a whole week, and do you love learning new patterns? If yes, then you should come. 
 
-**Almost certainly, yes.** Passout is not a showcase and it is not selective by skill.
-Ask yourself two things:
+In terms of skills, being able to comfortably pass 6-club three-count and 7-club two-count is a good basis that will allow you to participate in many activites.
 
-> Would you enjoy doing nothing but passing for a whole week?
-> Do you love learning new patterns?
-
-If the answer is yes, then you should come. Beginners pass with veterans, people teach
-each other, and patterns get invented on the spot. You will be welcomed.
-
-Family members and non-jugglers are welcome to come along too — there is plenty of
-communal space for games, puzzles, and good company.
-
-## Why it's privately organized
-
-Passout is registration-only, and that sometimes gets mistaken for exclusivity. It
-isn't. We organize it privately for two simple reasons:
-
-- **To protect the community character.** Passout works because everyone takes part —
-  in the passing, the cooking, the cleaning, and the hanging out. Knowing roughly who's
-  coming and how many beds we need is what keeps it a shared household rather than an
-  anonymous convention.
-- **So people know what they're getting into.** A week of immersive passing, communal
+Passout is technically invite-only. It isn't intended to be exclusive, but to make sure that attendees come with the right expectations: There will be a lot of passing, much of it experimental and far beyond four-count, so expect to participate in many patterns and workshops beyond the familiar. Also passout works because everyone takes part —
+  in the passing, the cooking, the cleaning, and the hanging out. A week of immersive passing, communal
   meals, shared chores, and close quarters is wonderful, but it's a specific kind of
-  trip. Registering ahead means everyone arrives with the same expectations.
+  trip.
 
-We try hard to keep it open, not exclusive:
-
-- A **scholarship program** offers reduced or free registration, paid for by supporter
-  tickets and past surplus. It runs on the honor system — **we never ask for a
-  justification**.
-- **Anyone under 18 attends for free** (with a registered guardian).
-- You can chip in extra to support others, or request a lower fee — whatever fits your
-  situation.
+Registration is typically around $50-75 per day, including accommodation and food.
+We offer a **scholarship program,** offering reduced or free registration, paid for by supporter
+  tickets and past surplus. 
 
 ## A typical week
 
