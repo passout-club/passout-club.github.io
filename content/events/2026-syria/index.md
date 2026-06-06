@@ -15,6 +15,3 @@ draft: false
 
 
 A large house built around a gym in Syria, VA — "near" DC. 34 participants.
-Never been to Passout and wondering if you're "good enough"? Ask yourself: would you
-enjoy doing nothing but passing for a whole week, and do you love learning new
-patterns? If yes, then you should come.
