@@ -1,5 +1,5 @@
 ---
-title: "Passout 2025 — Virginia"
+title: "Passout Syria, VA"
 startDate: 2025-05-30
 endDate: 2025-06-07
 location: "Syria, VA (near Washington DC)"
@@ -13,14 +13,21 @@ cover: "./photos/cover.jpg"
 draft: false
 ---
 
-> **This is sample content.** Replace it with a real write-up, or delete the
-> `2025-virginia` folder entirely. See the README for how to add a real event.
+Eight nights at a house in the Blue Ridge foothills near Syria, VA — "near" DC if
+you squint — and the week was nothing but club passing, from four-handed siteswaps
+to takeout patterns, with a little ball and ring passing mixed in. Solo juggling was
+rare. We focused on learning, teaching, and inventing new patterns.
 
-We rented a big house in the Blue Ridge foothills and spent the week doing what we came
-for: passing, teaching, and inventing patterns. Mornings started slow with coffee and
-warm-ups; afternoons filled with workshops; evenings ran long with games, volleyclub,
-and more passing.
+It was as much about the community as the juggling: we built the week together by
+cooking and cleaning for the group, played board games and worked puzzles in the big
+communal room, ran a regular game of volleyclub, and took an outing together. There
+were workshops running throughout the week, and the place had a large communal area
+plus several spaces to juggle.
 
-Everyone pitched in on meals, so the kitchen was as busy as the passing space. Highlights
-included a newcomers' workshop that had several first-timers running solid four-counts by
-the end of the week, and an impromptu takeout session that took over the main hall.
+We all pitched in to prepare meals, so the kitchen stayed as busy as the passing
+space, with plenty of dishes that scaled well and kept the vegetarians and vegans
+happy. Family members and non-jugglers came along too.
+
+Never been to Passout and wondering if you're "good enough"? Ask yourself: would you
+enjoy doing nothing but passing for a whole week, and do you love learning new
+patterns? If yes, then you should come.
