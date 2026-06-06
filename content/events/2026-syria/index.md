@@ -17,14 +17,14 @@ workshops:
   - Apollo+
   - Phonecian Waltz, Phonecian Walt, Opernball, Opernb
   - Glub shoves
-  - Discussion: How to think about pattern choreography
+  - "Discussion: How to think about pattern choreography"
   - Mini Grail
   - Handswap
   - Walking siteswap feeds
   - Red/blue coding
   - Catch the carrot, catch the carro
   - 2 club manipulators
-  - Discussion: good beginner siteswap patterns
+  - "Discussion: good beginner siteswap patterns"
   - Gauntlet of clubs 
 draft: false
 ---
