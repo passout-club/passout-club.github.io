@@ -27,7 +27,7 @@ We offer a **scholarship program,** offering reduced or free registration, paid 
 
 ## When and where is the next Passout?
 
-Events are announced over the passout mailing list (and for the North American passout also our Discord server).
+Events are announced over the passout mailing list (and for the North American passout also our Discord server). Ask other passout members about how to join.
 
 ## Links and resources
 
@@ -36,5 +36,5 @@ Events are announced over the passout mailing list (and for the North American p
 - [Modern Passing](https://modernpassing.com) — book explaining various patterns and how to get there
 - [Siteswap list](https://www.cs.cmu.edu/~ckaestne/siteswaps.xhtml) — Four-handed siteswaps sorted by compatibility
 - [Orbits in Takeouts](https://notations.bonauer.me)
-- [Our Discord](https://discord.gg/REPLACE-WITH-INVITE) —
+- [Organizer notes](https://drive.google.com/drive/folders/1FXY9ohfU7FPoylr43CZVfd9VHrFcyKsA)
 
